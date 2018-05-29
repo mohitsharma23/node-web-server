@@ -20,6 +20,7 @@ app.use((req, res, next) => {
   next();
 });
 
+//********* Maintainance Page*********
 // app.use((req, res, next) => {
 //   res.render('maintain.hbs');
 // });
@@ -44,6 +45,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page',
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'My Projects'
   });
 });
 
